@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="styles/contact.css">
+  <link rel="stylesheet" href="styles/darktheme.css">
+
+</head>
+<body>
+  <header id="header">
+    <h1 class="header-title">Always Clothed</h1>
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav id="navbar" role="navigation" aria-label="Main Navigation">
+      <a class="nav-link" href="home.html" tabindex="0">Home</a> |
+      <a class="nav-link" href="products.html" tabindex="0">Products</a> |
+      <a class="nav-link" href="about.html" tabindex="0">About Us</a> |
+      <a class="nav-link" href="contact.html" tabindex="0">Contact Us</a> |
+      <a class="nav-link" href="faq.html" tabindex="0">FAQ</a>
+      <a id="theme-toggle" tabindex="0">Switch to Night Mode</a>
+      <a class="nav-link" href="registr.html">Sign in</a> 
+      <a class="nav-link" href="log.html">Log in</a>
+    </nav>
+    <div id="sidebar">
+      <div class="sidebar-links">
+        <a class="nav-link" href="home.html" tabindex="0">Home</a> 
+      <a class="nav-link" href="products.html" tabindex="0">Products</a>
+      <a class="nav-link" href="about.html" tabindex="0">About Us</a> 
+      <a class="nav-link" href="contact.html" tabindex="0">Contact Us</a> 
+      <a class="nav-link" href="faq.html" tabindex="0">FAQ</a>
+      <a id="theme-toggle" tabindex="0">Switch to Night Mode</a>
+      <a class="nav-link" href="registr.html">Sign in</a> 
+      <a class="nav-link" href="log.html">Log in</a>
+      </div>
+    </div>
+    <div id="sidebar-overlay"></div>
+  </header>
+
+  <div class="form-container">
+    <h2>Contact Form</h2>
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <br>
+
+        <button type="button" id="reset-button">Reset</button>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+  
+  <hr class="divider">
+  <footer id="footer">
+    <p class="footer-text">Team Members: Sanzhar, Alisher, Bekzhan</p>
+    <p class="footer-text">Date: 2024-09-10 | Contact: info@clothingstore.com</p>
+  </footer>
+  <script src="js files/script.js"></script>
+  <script src="js files/contact.js"></script>
+  <script>
+    // Select elements
+const hamburger = document.getElementById('hamburger');
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('sidebar-overlay');
+
+// Toggle sidebar and overlay
+hamburger.addEventListener('click', () => {
+  sidebar.classList.toggle('active');
+  overlay.classList.toggle('active');
+});
+
+// Close sidebar when clicking outside (on overlay)
+overlay.addEventListener('click', () => {
+  sidebar.classList.remove('active');
+  overlay.classList.remove('active');
+});
+
+  </script>
+
+</body>
+</html>
